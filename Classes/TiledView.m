@@ -46,7 +46,6 @@
 }
 
 - (void)dealloc {
-	[tiledLayer release];
     [super dealloc];
 }
 

@@ -25,8 +25,10 @@
 	scrollView.minimumZoomScale = 0.5f;  
     scrollView.delegate = tiledView;
     [scrollView addSubview:tiledView];
+	[tiledView release];
 	
     [self.view addSubview:scrollView];
+	[scrollView release];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,8 +36,6 @@
 }
 
 - (void)dealloc {
-	[scrollView release];
-	[tiledView release];
     [super dealloc];
 }
 
