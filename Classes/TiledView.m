@@ -32,7 +32,7 @@
 	NSLog(@"%@", [NSString stringWithFormat:@"%gx [%d,%d] (%d,%d)-(%d,%d)", t.a, x, y, xmin, ymin, xmax, ymax]);
 	
 	NSString *fileName = [NSString stringWithFormat:@"image-%02d-%02d.jpg", x + 1, y + 1];
-	UIImage *image = [UIImage imageNamed:fileName];
+	UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:fileName ofType:nil]];
 	[image drawInRect:rect];
 }
 
