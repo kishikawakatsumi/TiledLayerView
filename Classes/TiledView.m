@@ -36,6 +36,12 @@
 	[image drawInRect:rect];
 }
 
+- (void)layoutSubviews {
+    if ([self respondsToSelector:@selector(contentScaleFactor)]) {
+        self.contentScaleFactor = 1.0f;
+    }
+}
+
 - (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView {
     [self setNeedsDisplay];  
     return NO;  

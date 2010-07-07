@@ -21,8 +21,8 @@
 	
     scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 460.0f)];  
     scrollView.contentSize = tiledView.bounds.size;  
-    scrollView.maximumZoomScale = 4.0f;  
-	scrollView.minimumZoomScale = 0.5f;  
+    scrollView.maximumZoomScale = 4.0f;
+	scrollView.minimumZoomScale = 0.5f;
     scrollView.delegate = tiledView;
     [scrollView addSubview:tiledView];
 	[tiledView release];
